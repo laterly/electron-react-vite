@@ -2,18 +2,26 @@
 
 ![Electron + React + Vite  ](screenshot.png)
 
-## Installation
+## Quick Start
 
-`npm install`
+```sh
+# clone the project
+git clone https://github.com/laterly/electron-react-vite.git
 
-## Development
+# enter the project directory
+cd electron-react-vite
 
-`npm run dev`
+# install dependency
+npm install
 
-## Build
+# develop
+npm run dev
 
-`npm run build`
+#build
 
-## Builder
+npm run build
 
-`npm run builder`
+#builder
+
+npm run builder
+```

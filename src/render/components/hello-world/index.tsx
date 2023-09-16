@@ -1,11 +1,10 @@
 import { toJS } from "mobx";
 import { observer } from "mobx-react";
-import store from "../../store";
+import { appStore } from "../../store";
 interface Props {
   msg?: string;
 }
 function HelloWorld(props: Props) {
-  const { appStore } = store;
   const { msg } = props;
   return (
     <>

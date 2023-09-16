@@ -5,9 +5,7 @@ import { User } from "./modules/user";
 configure({
   enforceActions: "observed",
 });
-const store = {
-  appStore: new App(),
-  userStore: new User(),
-};
+const appStore = new App();
+const userStore = new User();
 
-export default store;
+export { appStore, userStore };

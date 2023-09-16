@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { toJS } from "mobx";
+import { observer } from "mobx-react";
+import store from "../../store";
 interface Props {
   msg?: string;
 }
 function HelloWorld(props: Props) {
+  const { appStore } = store;
   const { msg } = props;
-  const [count, setCount] = useState<number>(0);
   return (
     <>
       <h1>{msg}</h1>
       <button
         onClick={() => {
-          setCount((value) => value + 1);
+          const count = toJS(appStore.count);
+          appStore.setCount(count + 1);
         }}
       >
-        count is: {count}
+        count is: {appStore.count}
       </button>
       <p>
         Edit <code>components/HelloWorld.vue</code> to test hot module
@@ -23,4 +26,4 @@ function HelloWorld(props: Props) {
   );
 }
 
-export default HelloWorld;
+export default observer(HelloWorld);

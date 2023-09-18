@@ -12,6 +12,7 @@
   },
   "main": "dist/main.js",
   "dependencies": {
+    "antd": "^5.9.1",
     "axios": "^1.5.0",
     "core-js": "^3.32.2",
     "mobx": "^6.10.2",
